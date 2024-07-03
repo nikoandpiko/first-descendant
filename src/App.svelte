@@ -14,7 +14,7 @@
   {#if $error}
     <div class="error">Error: {$error.message}</div>
   {:else}
-    <WeaponList {weaponData} />
     <DescendantList {descendantData} />
+    <WeaponList {weaponData} />
   {/if}
 </main>

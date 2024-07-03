@@ -9,13 +9,13 @@
 </script>
 
 <div class="metadata-section" id="descendant-data">
-  <h2>Descendant Information</h2>
+  <h2>Descendants</h2>
   {#if data.length > 0}
     <ul>
       {#each data as descendant}
         <li>
           <strong>{descendant.descendant_name}</strong><br>
-          <img src={descendant.descendant_image_url} alt={descendant.descendant_name} loading="lazy" />
+          <img class="descendant-image" src={descendant.descendant_image_url} alt={descendant.descendant_name} loading="lazy" />
           <div>
             <h3>Skills</h3>
             <ul>
@@ -26,7 +26,7 @@
                   Element: {skill.element_type}<br>
                   Archetype: {skill.arche_type}<br>
                   Description: {skill.skill_description}<br>
-                  <img src={skill.skill_image_url} alt={skill.skill_name} width="100" loading="lazy" />
+                  <img class="skill-image" src={skill.skill_image_url} alt={skill.skill_name} loading="lazy" />
                 </li>
               {/each}
             </ul>
@@ -56,9 +56,14 @@
     align-items: center;
     text-align: center;
   }
-  li > img {
+  .descendant-image {
     margin: 10px 0;
-    width: 150px;
-    height: auto;
+    width: 256px;
+    height: 256px;
+  }
+  .skill-image {
+    margin: 10px 0;
+    width: 128px;
+    height: 128px;
   }
 </style>

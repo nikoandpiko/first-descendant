@@ -9,7 +9,7 @@
 </script>
 
 <div class="metadata-section" id="weapon-data">
-  <h2>Weapon Information</h2>
+  <h2>Weapons</h2>
   {#if data.length > 0}
     <ul>
       {#each data as weapon}
@@ -47,7 +47,8 @@
   }
   li > img {
     margin: 10px 0;
-    width: 150px;
+    width: 1024px;
+    height: 304px;
     height: auto;
   }
 </style>
